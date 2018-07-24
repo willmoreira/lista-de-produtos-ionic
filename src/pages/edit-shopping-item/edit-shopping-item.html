@@ -1,0 +1,36 @@
+<!--
+  Generated template for the EditShoppingItemPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>{{item?.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label>NOME</ion-label>
+    <ion-input [(ngModel)]="item.name" placeholder=""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>QUANTIDADE</ion-label>
+    <ion-input [(ngModel)]="item.quantity" type="number" placeholder=""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>PREÇO</ion-label>
+    <ion-input [(ngModel)]="item.price" type="number" placeholder=""></ion-input>
+  </ion-item>
+
+  <button color="dark" ion-button round  (click)="saveItem(item)">SALVAR</button>
+  <button color="dark" ion-button round  color="danger" (click)="removeItem(item)">EXCLUIR</button>
+
+</ion-content>
